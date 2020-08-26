@@ -4,7 +4,7 @@
 sudo apt update
 sudo apt install -y apache2 php php-cli php-redis php-sqlite3 php-json php-pdo php-mysql php-zip php-gd php-mbstring php-curl php-xml php-pear php-bcmath mysql-server redis-server libapache2-mod-php zip unzip curl
 sudo ufw allow in "Apache Full"
-sudo a2enmod ssl rewrite
+sudo a2enmod ssl rewrite headers
 
 #set default homepage files
 sudo mv default/* /var/www/html/
@@ -30,9 +30,11 @@ then
     ssh-add ~/.ssh/id_rsa
 fi
 
+sudo systemctl restart apache2
+
 ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
 echo "###################################################
 ## Setup complete!
-## Now point your domain to your public IP using A Record
+## Now point your domains to your public IP using A Record.
 ## Your public IP is: ${ip}
 ###################################################"

@@ -1,7 +1,10 @@
 ## SERVER SETUP AND CONFIGURATION
 
 ### SERVER: UBUNTU 20.04
-AWS EC2 Instance setup LAMP stack script, check [commands.md](commands.md) for optional setup 
+AWS EC2 Instance setup LAMP stack script.
+This also installs composer, node, redis-server, and common php extensions.
+Check [commands.md](commands.md) for optional setup.
+
 
 ```sh
 git clone https://github.com/pjsalita/server.git
@@ -11,4 +14,7 @@ bash setup.sh
 bash setup.sh [NameOrEmail] #to generate your private and public key
 ```
 
-After setup you can point your domain to your public IP. Sample virtual hosts are under **sites** folder
+Recommendations:
+- Use CloudFlare to manage your DNS.
+- After the setup has finished it will give you your instance's public IP, you can then point your domains to your public IP using A Records.
+- Sample virtual hosts are under **sites** folder.
