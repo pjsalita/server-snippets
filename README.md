@@ -19,4 +19,4 @@ Recommendations:
 - After the setup has finished it will give you your instance's public IP, you can then point your domains to your public IP using A Records.
 - Sample virtual hosts are under **sites** folder.
 
-<a href="https://www.buymeacoffee.com/pjsalita" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.buymeacoffee.com/pjsalita" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" width="180"></a>
