@@ -7,8 +7,8 @@ sudo ufw allow in "Apache Full"
 sudo a2enmod ssl rewrite
 
 #set default homepage files
-sudo rm /var/www/html/*
-sudo mv default/* /var/www/html
+sudo mv default/* /var/www/html/
+sudo mv sites/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 #composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -29,3 +29,10 @@ then
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/id_rsa
 fi
+
+ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
+echo "###################################################
+## Setup complete!
+## Now point your domain to your public IP using A Record
+## Your public IP is: ${ip}
+###################################################"

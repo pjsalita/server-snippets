@@ -1,7 +1,7 @@
 ## OTHER USEFUL COMMANDS
 
 #### Create new MySQL User
-```
+```sh
 sudo mysql
     CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
     GRANT ALL PRIVILEGES ON *.* TO 'database_user'@'localhost';
@@ -10,7 +10,7 @@ sudo mysql
 
 Reference: [CertBot](https://certbot.eff.org/lets-encrypt/ubuntufocal-apache)
 #### Certbot with CloudFlare
-```
+```sh
 sudo snap install --beta --classic certbot
 sudo snap set certbot trust-plugin-with-root=ok
 sudo snap install --beta certbot-dns-cloudflare
@@ -22,7 +22,7 @@ sudo chmod 600 ~/.secrets/certbot/cloudflare.ini
 ```
 
 ##### For premium domains
-```
+```sh
 certbot certonly \
 --dns-cloudflare \
 --dns-cloudflare-credentials ~/.secrets/certbot/cloudflare.ini \
@@ -31,7 +31,7 @@ certbot certonly \
 ```
 
 ##### For free domains (MANUAL)
-```
+```sh
 certbot certonly \
 --manual \
 --email email@domain.com \
